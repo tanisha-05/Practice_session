@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2D Square Layout</title>
+<style>
+  .cell {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+<h1>2D Square Layout</h1>
+<form id="dimensionsForm">
+  <label for="rows">Number of Rows:</label>
+  <input type="number" id="rows" name="rows" min="1" required>
+  <label for="columns">Number of Columns:</label>
+  <input type="number" id="columns" name="columns" min="1" required>
+  <button type="submit">Generate Layout</button>
+</form>
+<div id="squareLayout"></div>
+
+<script>
+  const form = document.getElementById('dimensionsForm');
+  const squareLayout = document.getElementById('squareLayout');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const rows = parseInt(document.getElementById('rows').value);
+    const columns = parseInt(document.getElementById('columns').value);
+    generateSquareLayout(rows, columns);
+  });
+
+  function generateSquareLayout(rows, columns) {
+    let html = '';
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < columns; j++) {
+        const color = (i + j) % 2 === 0 ? 'black' : 'red';
+        html += `<div class="cell" style="background-color: ${color};"></div>`;
+      }
+      html += '<br>';
+    }
+    squareLayout.innerHTML = html;
+  }
+</script>
+</body>
+</html>

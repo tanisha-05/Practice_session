@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .grid-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .grid-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="grid-item">
+    <a href="https://via.placeholder.com/500" target="_blank">
+      <img src="https://via.placeholder.com/500" alt="Image 1">
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="https://via.placeholder.com/500" target="_blank">
+      <img src="https://via.placeholder.com/500" alt="Image 2">
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="https://via.placeholder.com/500" target="_blank">
+      <img src="https://via.placeholder.com/500" alt="Image 1">
+    </a>
+  </div>
+</div>
+<div class="grid">
+    <div class="grid-item">
+      <a href="https://via.placeholder.com/500" target="_blank">
+        <img src="https://via.placeholder.com/500" alt="Image 1">
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="https://via.placeholder.com/500" target="_blank">
+        <img src="https://via.placeholder.com/500" alt="Image 2">
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="https://via.placeholder.com/500" target="_blank">
+        <img src="https://via.placeholder.com/500" alt="Image 1">
+      </a>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="grid-item">
+      <a href="https://via.placeholder.com/500" target="_blank">
+        <img src="https://via.placeholder.com/500" alt="Image 1">
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="https://via.placeholder.com/500" target="_blank">
+        <img src="https://via.placeholder.com/500" alt="Image 2">
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="https://via.placeholder.com/500" target="_blank">
+        <img src="https://via.placeholder.com/500" alt="Image 1">
+      </a>
+    </div>
+  </div>
+</body>
+</html>

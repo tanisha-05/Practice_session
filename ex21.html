@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<title>Digital Clock</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f9ed09;
+        margin: 0;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .clock-container {
+        margin-top: 20px;
+        width: 400px;
+        height: 250px;
+        background-color: #fa5712;
+        border: 2px solid #333;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clock {
+        font-family: Arial, sans-serif;
+        font-size: 48px;
+        text-align: center;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Digital Clock</h1>
+        </div>
+        <div class="clock-container">
+            <div class="clock" id="clock"></div>
+        </div>
+    </div>
+<script>
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('clock').textContent = timeString;
+}
+
+setInterval(updateClock, 1000);
+
+updateClock();
+</script>
+</body>
+</html>

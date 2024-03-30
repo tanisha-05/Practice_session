@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Assignment 14</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(117, 166, 223);
+            color: rgb(13, 132, 230);
+            font-size: 40px;
+            font-weight: 400;
+            margin: 10px;
+        }
+        .container{
+            display: flex;
+            width: auto;
+            height: 100vh;
+            background-color: aquamarine;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content:space-evenly;
+            align-content:space-evenly ;
+        }
+        .container div{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            border:black 10px double;
+        }
+        .d1{
+            position: relative;
+            left:50px;
+        }
+        .d1 img{
+            height: 100%;
+            width:100%;
+            position: absolute;
+            
+        }
+        .red{
+            width:200px;
+            height:200px;
+            background-color: red;
+    }
+        .blue{
+            width:200px;
+            height:200px;
+            background-color: rgb(83, 83, 146);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="red container" style="background-image: 4.jpeg; background-size: cover;">
+        Line of sight is in you
+        </div>
+        <div class="blue" style="background-image: 6.jpeg; background-size: cover;">
+            
+            I wanna be Star not a Moon
+            
+        </div>
+    </div>
+</body>
+</html>

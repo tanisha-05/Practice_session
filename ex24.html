@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Cards</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+        margin: 0;
+    }
+
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .card .date {
+        font-size: 12px;
+        color: #999;
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+    <div id="eventsContainer" class="events-container"></div>
+
+    <script>
+        const events = [
+            {
+                title: 'Mastering Digital Marketing Strategies',
+                date: 'March 30, 2024',
+                description: 'Join our expert panel for a webinar on latest trends and strategies in digital marketing. Learn how to leverage social media, SEO, and content marketing to boost your online presence and drive business growth.'
+            },
+            {
+                title: 'Exploring Sustainable Energy Solutions',
+                date: 'April 15, 2024',
+                description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id augue malesuada, pulvinar quam id, ultricies neque.'
+            },
+            {
+                title: 'Event 3',
+                date: 'May 5, 2024',
+                description: 'Duis maximus tellus nec massa consequat, nec varius leo fermentum. Sed in nunc vitae nulla gravida feugiat.'
+            }
+        ];
+
+        const eventsContainer = document.getElementById('eventsContainer');
+
+        events.forEach(event => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const image = document.createElement('img');
+            image.src = '1.jpg'; 
+            image.alt = event.title;
+            card.appendChild(image);
+
+            const title = document.createElement('h2');
+            title.textContent = event.title;
+            card.appendChild(title);
+
+            const date = document.createElement('div');
+            date.classList.add('date');
+            date.textContent = event.date;
+            card.appendChild(date);
+
+            const description = document.createElement('p');
+            description.textContent = event.description;
+            card.appendChild(description);
+
+            eventsContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

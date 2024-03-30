@@ -1,0 +1,32 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #3498db, #2c3e50);
+    background-image: url('your-image-url.jpg'); 
+    background-blend-mode: overlay; 
+    color: #fff; 
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #080808; 
+  }
+  
+  p {
+    font-size: 15px;
+    color: #f60606; 
+    line-height: 1.5;
+  }
+  
+  em {
+    color: #f39c12; 
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #f90606; 
+  }
+  
